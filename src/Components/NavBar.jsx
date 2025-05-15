@@ -14,6 +14,7 @@ return (
             <li className='nav-item'><Link className="nav-link" to="/productos/remeras">Remeras</Link></li>
             <li className='nav-item'><Link className="nav-link" to="/productos/buzos">Buzos</Link></li>
 
+
         </ul>
         <CartWidget/>
     </nav>
