@@ -1,23 +1,26 @@
 
-import { useState } from "react";
-import ItemCount from "./ItemCount";
+import { useContext, useState } from "react";
 import {toCapital} from "../helpers/toCapital";
+import ItemCount from "./ItemCount";
+import { CartContext } from "../context/CartContext";
+import { set } from "react-hook-form";
+
+
 
 
 const ItemDetail = ({ item }) => {
 
-const [cantidad, setcantidad] = useState(1);
+  const {carrito, agregarAlCarrito} = useContext(CartContext);
+  console.log(carrito);
 
-const handleRestar = ()=> {
-    cantidad > 1 && setcantidad(cantidad - 1);
-}
+  const [cantidad, setcantidad] = useState(1);
 
-const handleSumar = ()=> {
-    cantidad < item.stock && setcantidad(cantidad + 1);
-}
+  const handleRestar = ()=> {
+      cantidad > 1 && setcantidad(cantidad - 1);
+  }
 
-const handleAgregar = () => {
-    console.log({...item, cantidad})
+  const handleSumar = ()=> {
+      cantidad < item.stock && setcantidad(cantidad + 1);
   }
 
   return (
@@ -33,7 +36,7 @@ const handleAgregar = () => {
                   cantidad={cantidad}
                   handleSumar={handleSumar}
                   handleRestar={handleRestar}
-                  handleAgregar={handleAgregar}
+                  handleAgregar={()=>{agregarAlCarrito(item, cantidad) }}
                 />
 
         </div>
