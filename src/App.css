@@ -67,7 +67,7 @@
 
 .producto > div {
   padding: 1rem;
-  background-color: var(--clr-main-light);
+  background-color: rgb(159, 170, 146);
   display: flex;
   flex-direction: column;
   gap: .5rem;
@@ -75,7 +75,7 @@
 
 .producto > img {
   width: 100%;
-  aspect-ratio: 2/1;
+  aspect-ratio: 1 /1;
   object-fit: cover;
 }
 
