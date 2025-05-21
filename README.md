@@ -48,25 +48,6 @@ src/
 | `NavBar.jsx`                | Barra de navegación principal de la aplicación.                                  |
 | `Nosotros.jsx`              | Página institucional con información sobre la empresa.                           |
 
----
-
-## 🚀 ¿Cómo ejecutar el proyecto?
-
-1. Cloná este repositorio:
-   ```bash
-   git clone https://github.com/tu-usuario/web-repuestos.git
-   cd web-repuestos
-   ```
-
-2. Instalá las dependencias:
-   ```bash
-   npm install
-   ```
-
-3. Iniciá el servidor de desarrollo:
-   ```bash
-   npm run dev
-   ```
 
 ---
 
